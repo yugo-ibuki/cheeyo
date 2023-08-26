@@ -7,8 +7,11 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "",
-	Short: "",
+	Use:   "this cheers you up",
+	Short: "this cheers you up",
+	Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println("this cheers you up")
+	},
 }
 
 func Execute() {
