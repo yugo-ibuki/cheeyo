@@ -6,8 +6,8 @@ import (
 )
 
 func Print(dialog string) {
-	var upperDisplay = []rune("＿人＿")
-	var downDisplay = []rune("￣Y^Y￣")
+	var upperDisplay = []rune("＿人人人＿")
+	var downDisplay = []rune("￣Y^Y^Y^Y￣")
 	display := ""
 	for i, v := range dialog {
 		// skip first time
@@ -43,7 +43,7 @@ func clear() {
 
 func printFormatted(upperTemp, downTemp, display string) {
 	fmt.Println(upperTemp)
-	fmt.Printf("＞ %s    ＜", display)
+	fmt.Printf("＞ %s ＜", display)
 	fmt.Println()
 	fmt.Println(downTemp)
 }
