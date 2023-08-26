@@ -11,3 +11,8 @@ go install https://github.com/yugo-ibuki/cheeyo
 ```bash
 cheeyo
 ```
+
+## Example
+
+![](./gif/usage.gif)
+
