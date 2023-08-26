@@ -11,7 +11,6 @@ var rootCmd = &cobra.Command{
 	Use:   "this cheers you up",
 	Short: "this cheers you up",
 	Run: func(cmd *cobra.Command, args []string) {
-		//cheer.Print("cheer up!")
 		cheer.Print("頑張れ！！！")
 	},
 }
