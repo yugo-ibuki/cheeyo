@@ -1,4 +1,4 @@
-module cheeyo
+module github.com/yugo-ibuki/cheeyo
 
 go 1.20
 
