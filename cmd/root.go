@@ -1,9 +1,9 @@
 package cmd
 
 import (
-	"cheeyo/pkg/cheer"
 	"fmt"
 	"github.com/spf13/cobra"
+	"github.com/yugo-ibuki/cheeyo/pkg/cheer"
 	"os"
 )
 

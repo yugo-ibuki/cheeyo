@@ -1,6 +1,6 @@
 package main
 
-import "cheeyo/cmd"
+import "github.com/yugo-ibuki/cheeyo/cmd"
 
 func main() {
 	cmd.Execute()
