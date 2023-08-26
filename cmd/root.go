@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"cheeyo/pkg/cheer"
 	"fmt"
 	"github.com/spf13/cobra"
 	"os"
@@ -10,7 +11,7 @@ var rootCmd = &cobra.Command{
 	Use:   "this cheers you up",
 	Short: "this cheers you up",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("this cheers you up")
+		cheer.Print("cheer up!")
 	},
 }
 
