@@ -1,4 +1,4 @@
-module fortune-golling
+module cheeyo
 
 go 1.20
 
