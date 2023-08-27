@@ -18,9 +18,9 @@ func Print(dialog string) {
 		var upperTemp = string(upperDisplay)
 		var downTemp = string(downDisplay)
 
-		// if even, replace the last character
+		// if even, replace the last character or if over 15, replace the last character.
 		// because appending upper and down is faster than replacing the cheering word.
-		if i%2 == 0 {
+		if i%2 == 0 || i > 15 {
 			upperTemp = string(upperDisplay[:len(upperDisplay)-1]) + "人" + string(upperDisplay[len(upperDisplay)-1:])
 			downTemp = string(downDisplay[:len(downDisplay)-1]) + "^Y" + string(downDisplay[len(downDisplay)-1:])
 		}
