@@ -37,8 +37,8 @@ var rootCmd = &cobra.Command{
 		// シード値の設定（一般的には現在時刻をシードとして使用する）
 		src := rand.NewSource(time.Now().UnixNano())
 		r := rand.New(src)
-		// 10から20の間のランダムな整数を取得
-		randomNumber := RandIntBetween(r, 0, len(w))
+		// range pickup (0 ~ len(w)-1)
+		randomNumber := RandIntBetween(r, 0, len(w)-1)
 
 		cheer.Print(w[randomNumber])
 	},
