@@ -34,7 +34,6 @@ var rootCmd = &cobra.Command{
 			w = words.Words
 		}
 
-		// シード値の設定（一般的には現在時刻をシードとして使用する）
 		src := rand.NewSource(time.Now().UnixNano())
 		r := rand.New(src)
 		// range pickup (0 ~ len(w)-1)
@@ -55,7 +54,6 @@ func Execute() {
 	}
 }
 
-// RandIntBetween は、指定した範囲内でランダムな整数を返します。
 func RandIntBetween(r *rand.Rand, min, max int) int {
 	return r.Intn(max-min+1) + min
 }
