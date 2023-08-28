@@ -37,8 +37,7 @@ var rootCmd = &cobra.Command{
 		src := rand.NewSource(time.Now().UnixNano())
 		r := rand.New(src)
 		// range pickup (0 ~ len(w)-1)
-		randomNumber := RandIntBetween(r, 0, len(w)-1)
-
+		randomNumber := randIntBetween(r, 0, len(w)-1)
 		cheer.Print(w[randomNumber])
 	},
 }
@@ -54,6 +53,6 @@ func Execute() {
 	}
 }
 
-func RandIntBetween(r *rand.Rand, min, max int) int {
+func randIntBetween(r *rand.Rand, min, max int) int {
 	return r.Intn(max-min+1) + min
 }
