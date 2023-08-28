@@ -43,7 +43,7 @@ func clear() {
 
 func printFormatted(upperTemp, downTemp, display string) {
 	fmt.Println(upperTemp)
-	fmt.Printf("＞ %s ＜", display)
+	fmt.Printf("＞ %s  ＜", display)
 	fmt.Println()
 	fmt.Println(downTemp)
 }
