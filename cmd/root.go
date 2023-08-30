@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/spf13/cobra"
 	"github.com/yugo-ibuki/cheeyo/assets"
-	"github.com/yugo-ibuki/cheeyo/pkg/cheer"
+	"github.com/yugo-ibuki/cheeyo/pkg"
 	"math/rand"
 	"os"
 	"time"
@@ -43,7 +43,7 @@ var rootCmd = &cobra.Command{
 		r := rand.New(src)
 		// range pickup (0 ~ len(w)-1)
 		randomNumber := randIntBetween(r, 0, len(w)-1)
-		cheer.Print(w[randomNumber])
+		pkg.Print(w[randomNumber])
 	},
 }
 

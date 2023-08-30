@@ -1,4 +1,4 @@
-package cheer
+package pkg
 
 import (
 	"fmt"
