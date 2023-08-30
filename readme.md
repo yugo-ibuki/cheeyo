@@ -23,7 +23,8 @@ Usage:
 
 Flags:
   -h, --help          help for this
-  -p, --path string   words config path
+  -p, --path  string   words config path
+  -m, --merge boolean  merge words config
 ```
 
 ## Interface

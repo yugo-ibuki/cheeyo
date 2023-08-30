@@ -16,6 +16,7 @@ var rootCmd = &cobra.Command{
 	Short: "this cheers you up",
 	Run: func(cmd *cobra.Command, args []string) {
 		path := cmd.Flag("path").Value.String()
+		merge := cmd.Flag("merge").Value.String()
 
 		var w []string
 		if len(path) != 0 {
@@ -29,6 +30,11 @@ var rootCmd = &cobra.Command{
 			if err := json.Unmarshal([]byte(data), &w); err != nil {
 				fmt.Print("error occurs...: ", err)
 				os.Exit(1)
+			}
+
+			// merge words config and existing words
+			if merge == "true" {
+				w = append(w, words.Words...)
 			}
 		} else {
 			w = words.Words
@@ -44,6 +50,7 @@ var rootCmd = &cobra.Command{
 
 func init() {
 	rootCmd.Flags().StringP("path", "p", "", "words config path")
+	rootCmd.Flags().BoolP("merge", "m", false, "merge words config")
 }
 
 func Execute() {
