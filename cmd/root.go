@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/spf13/cobra"
+	"github.com/yugo-ibuki/cheeyo/assets"
 	"github.com/yugo-ibuki/cheeyo/pkg/cheer"
-	"github.com/yugo-ibuki/cheeyo/pkg/words"
 	"math/rand"
 	"os"
 	"time"
@@ -20,7 +20,6 @@ var rootCmd = &cobra.Command{
 
 		var w []string
 		if len(path) != 0 {
-			fmt.Print("path: ", path)
 			data, err := os.ReadFile(path)
 			if err != nil {
 				fmt.Print("error occurs...: ", err)
@@ -34,10 +33,10 @@ var rootCmd = &cobra.Command{
 
 			// merge words config and existing words
 			if merge == "true" {
-				w = append(w, words.Words...)
+				w = append(w, assets.Words...)
 			}
 		} else {
-			w = words.Words
+			w = assets.Words
 		}
 
 		src := rand.NewSource(time.Now().UnixNano())

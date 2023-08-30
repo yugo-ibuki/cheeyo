@@ -1,4 +1,4 @@
-package words
+package assets
 
 var Words = []string{
 	"決して無理をしないでね ",
