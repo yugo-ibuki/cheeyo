@@ -21,8 +21,8 @@ func Print(dialog string) {
 		// if even, replace the last character or if over 15, replace the last character.
 		// because appending upper and down is faster than replacing the cheering word.
 		if i%2 == 0 || i > 15 {
-			upperTemp = string(upperDisplay[:len(upperDisplay)-1]) + "人" + string(upperDisplay[len(upperDisplay)-1:])
-			downTemp = string(downDisplay[:len(downDisplay)-1]) + "^Y" + string(downDisplay[len(downDisplay)-1:])
+			upperTemp = addLength(upperDisplay, "人")
+			downTemp = addLength(downDisplay, "^Y")
 		}
 
 		printFormatted(upperTemp, downTemp, display)
@@ -46,4 +46,9 @@ func printFormatted(upperTemp, downTemp, display string) {
 	fmt.Printf("＞ %s  ＜", display)
 	fmt.Println()
 	fmt.Println(downTemp)
+}
+
+// addLength - add length to the last character
+func addLength(runeWord []rune, word string) string {
+	return string(runeWord[:len(runeWord)-1]) + word + string(runeWord[len(runeWord)-1:])
 }
